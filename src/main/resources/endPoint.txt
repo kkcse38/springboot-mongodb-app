@@ -1,0 +1,52 @@
+//Find book by id
+{
+  book(id:"5cbccb13662d15321678bd5d"){
+    id
+    name
+    authors {
+      id
+      firstName
+    }
+  }
+  
+}
+//Find all the books
+{
+  bookList{
+    id
+    name
+    pageCount
+  }
+}
+//Get author detail
+{
+  author(id:"5cbcce04662d15321678bd6b"){
+    id
+    firstName
+  }
+}
+//Get author list
+{
+	authorList{
+  		id
+  		firstName
+	}
+}
+//Add new Author
+mutation{
+	newAuthor(firstName:"A1",lastName:"B1"){
+  	id
+  	firstName
+	}
+}
+//Update book pagecount
+mutation{
+  updateBookPageCount(pageCount:600, id: "5cbcd7aa662d15321678bd86"){
+ 		name
+    pageCount
+    authors {
+      id
+    }
+  }
+}
+
