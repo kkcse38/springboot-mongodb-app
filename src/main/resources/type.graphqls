@@ -1,5 +1,6 @@
 type Query{
 	book(id:String!) : Book
+	bookByName(name:String!) : Book
 	bookList : [Book]
 	author(id:String!) : Author
 	authorList : [Author]
@@ -7,6 +8,7 @@ type Query{
 type Mutation{
 	newAuthor(firstName:String!,lastName:String!) : Author!
 	updateBookPageCount(pageCount:Int!,id:String!) : Book!
+	deleteAuthor(id:String!) : Boolean!
 }
 type Book{
   id:String!

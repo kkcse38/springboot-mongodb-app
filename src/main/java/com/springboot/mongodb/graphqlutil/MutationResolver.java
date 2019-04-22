@@ -42,5 +42,11 @@ public class MutationResolver implements GraphQLMutationResolver{
 		
 		return book;
 	}
+	
+	
+	public boolean deleteAuthor(String id) {
+		 authorRepository.deleteById(id);
+		 return true;
+	}
 
 }

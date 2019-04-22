@@ -30,6 +30,7 @@ public class Application{
 	@PostConstruct
 	public void createData() {
 
+			//Delete existing data from mongodb if exists
 			authorRepository.deleteAll();
 			bookRepository.deleteAll();
 		

@@ -10,6 +10,7 @@
   }
   
 }
+
 //Find all the books
 {
   bookList{
@@ -18,6 +19,19 @@
     pageCount
   }
 }
+
+//Find book by it's name
+{
+  bookByName(name:"Concept Of Physics"){
+   	id
+    name
+    authors {
+      id
+      firstName
+    }
+  }
+}
+
 //Get author detail
 {
   author(id:"5cbcce04662d15321678bd6b"){
@@ -25,6 +39,7 @@
     firstName
   }
 }
+
 //Get author list
 {
 	authorList{
@@ -32,6 +47,7 @@
   		firstName
 	}
 }
+
 //Add new Author
 mutation{
 	newAuthor(firstName:"A1",lastName:"B1"){
@@ -39,6 +55,7 @@ mutation{
   	firstName
 	}
 }
+
 //Update book pagecount
 mutation{
   updateBookPageCount(pageCount:600, id: "5cbcd7aa662d15321678bd86"){
@@ -50,3 +67,7 @@ mutation{
   }
 }
 
+//Delete an author
+mutation{
+  deleteAuthor(id:"5cbd7ada038434217c7d16db")
+}
