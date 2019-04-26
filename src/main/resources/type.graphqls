@@ -1,8 +1,10 @@
 type Query{
 	book(id:String!) : Book
 	bookByName(name:String!) : Book
+	bookByAuthor(id:String!) : [Book]
 	bookList : [Book]
 	author(id:String!) : Author
+	authorByName(firstName:String!, lastName:String!) : Author
 	authorList : [Author]
 }
 type Mutation{

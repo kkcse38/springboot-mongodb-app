@@ -71,3 +71,23 @@ mutation{
 mutation{
   deleteAuthor(id:"5cbd7ada038434217c7d16db")
 }
+
+//Find author by firstName and lastName
+{
+  authorByName(firstName:"HC", lastName:"Verma"){
+    firstName
+    lastName
+  }
+}
+//Book by author id
+{
+  bookByAuthor(id:"5cc2e44138bc87257c93c031"){
+    name,
+    pageCount,
+    authors{
+      lastName
+      firstName
+      id
+    }
+  }
+}

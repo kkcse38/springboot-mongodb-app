@@ -37,6 +37,7 @@ public class Book {
 	}
 
 	public String getName() {
+		System.out.println("\nCalled getName for Book\n");
 		return name;
 	}
 
@@ -53,6 +54,7 @@ public class Book {
 	}
 
 	public List<Author> getAuthors() {
+		System.out.println("\nCalled getAuthors in Book\n");
 		return authors;
 	}
 
